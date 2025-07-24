@@ -10,7 +10,32 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+        <style type="text/tailwindcss">
+            @layer components {
+                .page-container {
+                    @apply max-w-6xl m-auto px-8; 
+                }
+                .section-title-box{
+                    @apply text-center space-y-4; 
 
+                    h1{
+                        @apply text-5xl font-serif ; 
+
+                        span{
+                            @apply text-orange-500; 
+                        }
+                    }
+                    p{
+                        @apply text-2xl text-gray-500 max-w-4xl m-auto; 
+                    }
+                }
+                 
+                .grid-card-dark-overlay{
+                    @apply text-center rounded-md lg:rounded-3xl bg-gray-950/50 bg-blend-darken bg-no-repeat bg-cover bg-fixed lg:bg-scroll ;
+                }
+                 
+            }
+        </style>
 
     </head>
 
