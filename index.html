@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Flowers</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Flowers</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+       
+
+    </head>
+
+    <body>
+        
+        <header class="page-container mb-16 lg:mb-32">
+        
+            <!-- nav bar  -->
+            <div class="flex items-center justify-between mb-7 lg:mb-32 mt-6 lg:mt-8">
+                <img class="h-16 lg:h-auto" src="./assets/logo.png" alt="">
+        
+                <div class="flex items-center justify-between gap-12">
+                    <nav class="hidden lg:flex items-center justify-evenly text-gray-500 gap-12">
+                        <a href="Home" class="text-gray-900 font-bold">Home</a>
+                        <a href="Home">shop</a>
+                        <a href="Home">About Us</a>
+                    </nav>
+                    <!-- cart and text -->
+                    <div class="font-bold ">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Cart ($56)</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- HERO SECTION  -->
+            <section class="flex lg:items-end justify-between flex-col-reverse lg:flex-row">
+                <div class="w-full lg:w-1/2 space-y-4 mt-7">
+                    <h1 class="text-3xl font-bold lg:text-6xl font-serif  "> ALWAYS <span class="text-orange-500">FRESH <br>
+                            FLOWERS</span></h1>
+                    <p class="text-sm lg:text-2xl text-gray-500 ">Indulge your senses with the beauty and fragrance of our
+                        fresh
+                        flower shop. From classic roses to
+                        exotic blooms, we
+                        offer a wide variety of fresh flowers that are perfect for any occasion.</p>
+                </div>
+                <div class="-mx-4 lg:mx-0 w-full">
+                    <img class="w-full mx-12" src="./assets/hero-flower.png" alt="">
+                </div>
+            </section>
+        
+        </header>
+
+    </body>
+
 </html>
