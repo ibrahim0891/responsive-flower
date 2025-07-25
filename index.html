@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" id="top">
 
     <head>
         <meta charset="UTF-8">
@@ -48,7 +48,7 @@
                  
                 /* our plant section grid card */
                 .grid-card-container{
-                    @apply grid grid-cols-2 lg:grid-cols-4 gap-5 gap-y-16; 
+                    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-16; 
 
                     div{
                         img {
@@ -88,9 +88,9 @@
 
                 <div class="flex items-center justify-between gap-12">
                     <nav class="hidden lg:flex items-center justify-evenly text-gray-500 gap-12">
-                        <a href="Home" class="text-gray-900 font-bold">Home</a>
-                        <a href="Home">shop</a>
-                        <a href="Home">About Us</a>
+                        <a href="Home" class="text-gray-900 font-bold hover:underline">Home</a>
+                        <a href="#shop" class="hover:underline" title="Got to shop section">shop</a>
+                        <a href="#about" class="hover:underline">About Us</a>
                     </nav>
                     <!-- cart and text -->
                     <div class="font-bold p-4 hover:text-orange-900 hover:bg-orange-200 rounded-xl hover:shadow-md cursor-pointer transition-all ">
@@ -130,7 +130,7 @@
 
 
             <!-- OUR PLANTS SECTION  -->
-            <section class="page-container mb-10 ">
+            <section class="page-container mb-10"  id="shop">
 
                 <!-- SECTION HEADER AND DESCRIPTION  -->
                 <div class="section-title-box mb-20">
@@ -226,7 +226,7 @@
 
             <!-- TRUSTED SELLER SECTION  -->
             <section
-                class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-18 page-container mb-18 lg:mb-32 lg:mt-36">
+                class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-18 page-container mb-18 lg:mb-32 lg:mt-36" id="about">
 
                 <div class="relative -mb-5 lg:mb-0">
                     <!-- backgorund imgge -->
@@ -306,7 +306,7 @@
         </main>
 
         <footer
-            class="page-container flex flex-col lg:flex-row items-start justify-between p-12 gap-12 lg:gap-0 m-auto ">
+            class="page-container flex flex-col lg:flex-row items-start justify-between p-8 gap-12 lg:gap-0 m-auto ">
             <div
                 class="max-w-[360px] space-y-4  lg:mb-0 flex flex-col text-center items-center lg:items-start lg:text-left m-auto lg:m-0">
                 <img src="./assets/logo.png" alt="">
@@ -316,11 +316,11 @@
             </div>
             <div class="flex gap-8 lg:gap-28 items-center m-auto text-sm text-gray-500 footer-links ">
                 <div class="flex justify-between flex-col gap-4  lg:mb-0">
-                    <a href="">Home </a>
-                    <a href="">About Us </a>
-                    <a href=""> Blog </a>
-                    <a href=""> FAQ</a>
-                    <a href=""> Contact US </a>
+                    <a href="#top">Home </a>
+                    <a href="#top">About Us </a>
+                    <a href="#top"> Blog </a>
+                    <a href="#top"> FAQ</a>
+                    <a href="#top"> Contact US </a>
                 </div>
                 <div class="flex justify-between flex-col gap-4 lg:mb-0 ">
                     <a href="">Feature </a>
@@ -337,6 +337,9 @@
                 <img src="./assets/icon-youtube.png" alt="">
             </div>
         </footer>
+        <div class="p-2 text-gray-500 text-center mb-4  hover:underline">
+            <a href="#top" class="hover:scale-105 transition-all"> Back to top </a>
+        </div>
     </body>
 
 </html>
