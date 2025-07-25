@@ -14,9 +14,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
         <style type="text/tailwindcss">
             *{
                 font-family: "Lexend", sans-serif;
+                /* font-family: "Comic Relief", system-ui; */
             }
             @layer components {
                 .page-container {
@@ -38,7 +43,7 @@
                 }
                  
                 .grid-card-dark-overlay{
-                    @apply text-center rounded-xl lg:rounded-3xl bg-gray-950/50 bg-blend-darken bg-no-repeat bg-cover bg-fixed lg:bg-scroll ;
+                    @apply text-center rounded-xl lg:rounded-3xl bg-gray-950/30 bg-blend-darken bg-no-repeat bg-cover bg-fixed lg:bg-scroll ;
                 }
                  
                 /* our plant section grid card */
@@ -77,7 +82,7 @@
 
 
         <!-- nav bar  -->
-        <div class="page-container bg-white z-50 sticky top-0 py-2 shadow-sm lg:mb-28">
+        <div class="page-container bg-white z-50 sticky top-0 py-1 shadow-sm lg:mb-28">
             <div class="flex items-center justify-between mb-3  mt-6 lg:mt-8">
                 <img class="h-10 lg:h-auto" src="./assets/logo.png" alt="">
 
@@ -88,9 +93,9 @@
                         <a href="Home">About Us</a>
                     </nav>
                     <!-- cart and text -->
-                    <div class="font-bold ">
+                    <div class="font-bold p-4 hover:text-orange-900 hover:bg-orange-200 rounded-xl hover:shadow-md cursor-pointer transition-all ">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span>Cart ($56)</span>
+                        <span class="text-xl">Cart ($56)</span>
                     </div>
                 </div>
             </div>
@@ -99,11 +104,13 @@
         <header class="page-container mb-16 lg:mb-32">
             <!-- HERO SECTION  -->
             <section class="flex lg:items-start justify-between flex-col-reverse lg:flex-row">
-                <div class="w-full space-y-4 mt-8">
+                <div class="w-full space-y-4 mt-8 lg:mt-0">
                     <h1 class="text-3xl font-bold lg:font-semibold lg:mb-6 lg:text-6xl lg:text-left ">
-                        ALWAYS <span class="text-orange-500">FRESH
+                        ALWAYS
+                        <span class="text-orange-500">FRESH
                             <br>
-                            FLOWERS</span>
+                            FLOWERS
+                        </span>
                     </h1>
                     <p class="text-sm lg:text-xl text-gray-500 ">Indulge your senses with the beauty and fragrance of
                         our
@@ -144,7 +151,7 @@
                     <div>
                         <img src="./assets/sample-flower-image.png" alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2> Lily Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -153,7 +160,7 @@
                         <img src="https://www.homesake.in/cdn/shop/files/IH0F004-VT-4_theme.jpg?v=1747738155&width=1445"
                             alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lavender</h2>
+                            <h2> Lavender</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -162,7 +169,7 @@
                         <img src="https://www.reneesgarden.com/cdn/shop/products/poppy-ca-copper_pot-08.jpg?v=1741369499&width=416"
                             alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Poppy Blossom</h2>
+                            <h2> Poppy Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -171,7 +178,7 @@
                         <img src="https://static.vecteezy.com/system/resources/previews/052/005/816/non_2x/single-red-rose-blooming-in-a-pot-on-stone-floor-photo.jpg"
                             alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Rose Blossom</h2>
+                            <h2> Rose Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -180,7 +187,7 @@
                         <img src="https://www.greene-hands.com/cdn/shop/files/Potted-Artificial-XL-Cherry-Blossom-Tree-in-Premium-Marble-Gold-Ceramic-Pot_1.webp?v=1736157421"
                             alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Cherry Pot</h2>
+                            <h2> Cherry Pot</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -189,7 +196,7 @@
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwcPail5NKfHt3f2ulBanZIddcE1M_oOih4g&s"
                             alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Sunflower Pot </h2>
+                            <h2> Sunflower Pot </h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -198,7 +205,7 @@
                         <img src="https://hobbyfloristkl.com/wp-content/uploads/2021/08/Orchid-Pot-Opening-Delivery-KL-PJ-2-1.jpg"
                             alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Orchid Blossom</h2>
+                            <h2> Orchid Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -207,7 +214,7 @@
                         <img src="https://thumbs.dreamstime.com/b/clay-art-pink-lotus-flower-pot-craft-product-craftsmanship-beautiful-handmade-decoration-92158200.jpg"
                             alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lotus pot</h2>
+                            <h2> Lotus pot</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
                         <button>Add to Cart</button>
@@ -226,12 +233,12 @@
                     <img class="w-full" src="./assets/flower-store.png" alt="">
 
                     <!-- trusted seller badge  -->
-                    <img class="absolute top-0 right-0 -mr-24 -mt-28 w-72 hidden lg:block"
+                    <img class="absolute top-0 right-0 -mr-24 -mt-28 w-72 hidden lg:block filter"
                         src="./assets/trusted-badge.png" alt="">
                 </div>
                 <div>
                     <h1 class="text-3xl lg:text-6xl font-serif font-bold"> Flower & Plant Lover</h1>
-                    <ul class="list-disc text-slate-700 flex flex-col gap-5 mt-5 ml-5 text-sm lg:text-2xl">
+                    <ul class="list-disc text-slate-700 flex flex-col gap-5 mt-5 ml-5 text-sm lg:text-xl">
                         <li>
                             Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic
                             roses to exotic blooms, we
@@ -263,7 +270,6 @@
                         exotic blooms, we
                         offer a wide variety of fresh </p>
                 </div>
-
 
 
                 <!-- Offer box grid  -->
