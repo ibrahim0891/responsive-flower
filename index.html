@@ -10,7 +10,14 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
         <style type="text/tailwindcss">
+            *{
+                font-family: "Lexend", sans-serif;
+            }
             @layer components {
                 .page-container {
                     @apply max-w-6xl m-auto px-8; 
@@ -19,7 +26,7 @@
                     @apply text-center space-y-4; 
 
                     h1{
-                        @apply text-5xl font-serif ; 
+                        @apply text-3xl lg:text-6xl font-bold ; 
 
                         span{
                             @apply text-orange-500; 
@@ -31,21 +38,34 @@
                 }
                  
                 .grid-card-dark-overlay{
-                    @apply text-center rounded-md lg:rounded-3xl bg-gray-950/50 bg-blend-darken bg-no-repeat bg-cover bg-fixed lg:bg-scroll ;
+                    @apply text-center rounded-xl lg:rounded-3xl bg-gray-950/50 bg-blend-darken bg-no-repeat bg-cover bg-fixed lg:bg-scroll ;
                 }
                  
                 /* our plant section grid card */
-                .grid-card{
-                    img {
-                        @apply w-full aspect-auto object-cover rounded-xl;
-                    }
+                .grid-card-container{
+                    @apply grid grid-cols-2 lg:grid-cols-4 gap-5 gap-y-16; 
+
                     div{
-                        h1{
-                            @apply text-2xl;
+                        img {
+                            @apply w-full aspect-[2/3] object-cover rounded-xl ;
                         }
-                        p{
-                            
+                        h2{
+                            @apply text-sm lg:text-2xl; 
                         }
+                        button{
+                            @apply bg-orange-500 text-white w-full p-2 lg:p-5 rounded-lg ;                        
+                        }
+                    }
+
+                }
+                .grid-card-container > * {  
+                    @apply sticky top-36 bg-white lg:top-0 lg:relative; 
+                }
+
+                /* footer links */
+                .footer-links{
+                    a {
+                        @apply hover:underline ; 
                     }
                 }
             }
@@ -55,10 +75,10 @@
 
     <body>
 
-        <header class="page-container mb-16 lg:mb-32">
 
-            <!-- nav bar  -->
-            <div class="flex items-center justify-between mb-7 lg:mb-32 mt-6 lg:mt-8">
+        <!-- nav bar  -->
+        <div class="page-container bg-white z-50 sticky top-0 py-2 shadow-sm lg:mb-28">
+            <div class="flex items-center justify-between mb-3  mt-6 lg:mt-8">
                 <img class="h-10 lg:h-auto" src="./assets/logo.png" alt="">
 
                 <div class="flex items-center justify-between gap-12">
@@ -74,14 +94,18 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <header class="page-container mb-16 lg:mb-32">
             <!-- HERO SECTION  -->
-            <section class="flex lg:items-end justify-between flex-col-reverse lg:flex-row">
-                <div class="w-full lg:w-1/2 space-y-4 mt-7">
-                    <h1 class="text-3xl font-bold lg:text-6xl font-serif  "> ALWAYS <span class="text-orange-500">FRESH
+            <section class="flex lg:items-start justify-between flex-col-reverse lg:flex-row">
+                <div class="w-full space-y-4 mt-8">
+                    <h1 class="text-3xl font-bold lg:font-semibold lg:mb-6 lg:text-6xl lg:text-left ">
+                        ALWAYS <span class="text-orange-500">FRESH
                             <br>
-                            FLOWERS</span></h1>
-                    <p class="text-sm lg:text-2xl text-gray-500 ">Indulge your senses with the beauty and fragrance of
+                            FLOWERS</span>
+                    </h1>
+                    <p class="text-sm lg:text-xl text-gray-500 ">Indulge your senses with the beauty and fragrance of
                         our
                         fresh
                         flower shop. From classic roses to
@@ -89,7 +113,7 @@
                         offer a wide variety of fresh flowers that are perfect for any occasion.</p>
                 </div>
                 <div class="-mx-4 lg:mx-0 w-full">
-                    <img class="w-full mx-12" src="./assets/hero-flower.png" alt="">
+                    <img class="w-full mx-12 lg:mx-0" src="./assets/hero-flower.png" alt="">
                 </div>
             </section>
 
@@ -99,10 +123,10 @@
 
 
             <!-- OUR PLANTS SECTION  -->
-            <section class="page-container mb-10 lg:mb-52">
+            <section class="page-container mb-10 ">
 
                 <!-- SECTION HEADER AND DESCRIPTION  -->
-                <div class="section-title-box mb-12">
+                <div class="section-title-box mb-20">
                     <h1>
                         <Span> Our</Span> Plants
                     </h1>
@@ -114,80 +138,88 @@
                 </div>
 
                 <!-- PLANT SECTION GRID -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="grid-card-container">
 
                     <!-- GRID Card * 8 -->
-                    <div class="grid-card">
-                        <img src="./assets/sample-flower-image.png" class="" alt="">
+                    <div>
+                        <img src="./assets/sample-flower-image.png" alt="">
                         <div class="text-center  py-6 lg:py-8">
                             <h2 class="text-2xl"> Lily Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                     <div>
-                        <img src="./assets/sample-flower-image.png" class="w-full aspect-auto object-cover rounded-xl" alt="">
+                        <img src="https://www.homesake.in/cdn/shop/files/IH0F004-VT-4_theme.jpg?v=1747738155&width=1445"
+                            alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2 class="text-2xl"> Lavender</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                     <div>
-                        <img src="./assets/sample-flower-image.png" class="w-full aspect-auto object-cover rounded-xl" alt="">
+                        <img src="https://www.reneesgarden.com/cdn/shop/products/poppy-ca-copper_pot-08.jpg?v=1741369499&width=416"
+                            alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2 class="text-2xl"> Poppy Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                     <div>
-                        <img src="./assets/sample-flower-image.png" class="w-full aspect-auto object-cover rounded-xl" alt="">
+                        <img src="https://static.vecteezy.com/system/resources/previews/052/005/816/non_2x/single-red-rose-blooming-in-a-pot-on-stone-floor-photo.jpg"
+                            alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2 class="text-2xl"> Rose Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                     <div>
-                        <img src="./assets/sample-flower-image.png" class="w-full aspect-auto object-cover rounded-xl" alt="">
+                        <img src="https://www.greene-hands.com/cdn/shop/files/Potted-Artificial-XL-Cherry-Blossom-Tree-in-Premium-Marble-Gold-Ceramic-Pot_1.webp?v=1736157421"
+                            alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2 class="text-2xl"> Cherry Pot</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                     <div>
-                        <img src="./assets/sample-flower-image.png" class="w-full aspect-auto object-cover rounded-xl" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwcPail5NKfHt3f2ulBanZIddcE1M_oOih4g&s"
+                            alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2 class="text-2xl"> Sunflower Pot </h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                     <div>
-                        <img src="./assets/sample-flower-image.png" class="w-full aspect-auto object-cover rounded-xl" alt="">
+                        <img src="https://hobbyfloristkl.com/wp-content/uploads/2021/08/Orchid-Pot-Opening-Delivery-KL-PJ-2-1.jpg"
+                            alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2 class="text-2xl"> Orchid Blossom</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                     <div>
-                        <img src="./assets/sample-flower-image.png" class="w-full aspect-auto object-cover rounded-xl" alt="">
+                        <img src="https://thumbs.dreamstime.com/b/clay-art-pink-lotus-flower-pot-craft-product-craftsmanship-beautiful-handmade-decoration-92158200.jpg"
+                            alt="">
                         <div class="text-center  py-6 lg:py-8">
-                            <h2 class="text-2xl"> Lily Blossom</h2>
+                            <h2 class="text-2xl"> Lotus pot</h2>
                             <p class="text-xl font-bold"> 10USD</p>
                         </div>
-                        <button class="bg-orange-500 text-white w-full p-5 rounded-lg hover:scale-110 transition">Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
+
             </section>
 
             <!-- TRUSTED SELLER SECTION  -->
             <section
-                class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-14 page-container mb-18 lg:mb-32">
+                class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-18 page-container mb-18 lg:mb-32 lg:mt-36">
 
                 <div class="relative -mb-5 lg:mb-0">
                     <!-- backgorund imgge -->
@@ -224,9 +256,9 @@
             <!-- SECTION HEADER AND DESCRIPTION  -->
             <section class="page-container">
                 <!-- SECTION HEADER AND DESCRIPTION  -->
-                <div class="section-title-box mb-6 lg:mb-32 ">
+                <div class="section-title-box mb-6 lg:mb-20 ">
                     <h1><Span> Latest </Span> Deals</h1>
-                    <p class="text-sm lg:text-lg">Indulge your senses with the beauty and fragrance of our fresh flower
+                    <p class="text-sm lg:text-xl">Indulge your senses with the beauty and fragrance of our fresh flower
                         shop. From classic roses to
                         exotic blooms, we
                         offer a wide variety of fresh </p>
@@ -258,7 +290,7 @@
             <!-- newsletter -->
             <section
                 class="text-white text-center py-24 pt-28 lg:py-48 bg-[url(./assets/news-letter-bg.png)] bg-cover bg-center bg-no-repeat bg-fixed lg:bg-scroll px-9">
-                <h2 class="text-xl lg:text-5xl font-bold font-serif mb-6"> Join the colorful Bunch </h2>
+                <h2 class="text-5xl font-bold font-serif mb-12"> Join the colorful Bunch </h2>
                 <form class="max-w-3xl flex m-auto ">
                     <input type="email" name="" class="bg-white text-gray-500 w-full lg:flex-1 px-6"
                         placeholder="📧 Write Email ">
@@ -267,29 +299,34 @@
             </section>
         </main>
 
-        <footer class="flex flex-col lg:flex-row items-start justify-between p-12 ">
-            <div class="max-w-[360px] space-y-4 mb-6 lg:mb-0">
+        <footer
+            class="page-container flex flex-col lg:flex-row items-start justify-between p-12 gap-12 lg:gap-0 m-auto ">
+            <div
+                class="max-w-[360px] space-y-4  lg:mb-0 flex flex-col text-center items-center lg:items-start lg:text-left m-auto lg:m-0">
                 <img src="./assets/logo.png" alt="">
-                <p class="text-gray-500 text-2xl">Indulge your senses with the beauty and fragrance of our fresh flower
+                <p class="text-gray-500 text-sm lg:text-xl">Indulge your senses with the beauty and fragrance of our
+                    fresh flower
                     shop.</p>
             </div>
-            <div class="flex justify-between flex-col gap-6 mb-6 lg:mb-0">
-                <a href="">Home </a>
-                <a href="">About Us </a>
-                <a href=""> Blog </a>
-                <a href=""> FAQ</a>
-                <a href=""> Contact US </a>
+            <div class="flex gap-8 lg:gap-28 items-center m-auto text-sm text-gray-500 footer-links ">
+                <div class="flex justify-between flex-col gap-4  lg:mb-0">
+                    <a href="">Home </a>
+                    <a href="">About Us </a>
+                    <a href=""> Blog </a>
+                    <a href=""> FAQ</a>
+                    <a href=""> Contact US </a>
+                </div>
+                <div class="flex justify-between flex-col gap-4 lg:mb-0 ">
+                    <a href="">Feature </a>
+                    <a href="">Pricing </a>
+                    <a href=""> Privacy Policy </a>
+                    <a href=""> Terms of Service</a>
+                    <a href=""> Help Center </a>
+                </div>
             </div>
-            <div class="flex justify-between flex-col gap-6 mb-6 lg:mb-0 ">
-                <a href="">Feature </a>
-                <a href="">Pricing </a>
-                <a href=""> Privacy Policy </a>
-                <a href=""> Terms of Service</a>
-                <a href=""> Help Center </a>
-            </div>
-            <div class="flex gap-4 items-center ">
+            <div class="flex gap-8 lg:gap-4 items-center justify-center w-full lg:w-auto pt-4">
                 <img src="./assets/icon-linkedin.png" alt="">
-                <img class="aspect-square p-2 rounded-full border " src="./assets/icon-twitter.png" alt="">
+                <img src="./assets/icon-twitter.png" alt="">
                 <img src="./assets/icon-facebook.png" alt="">
                 <img src="./assets/icon-youtube.png" alt="">
             </div>
